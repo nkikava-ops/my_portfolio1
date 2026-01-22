@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Nini Kikava</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #000;
+        color: #fff;
+        font-family: "Libre Baskerville", serif;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      /* ================= NAV ================= */
+
+      header {
+        border-bottom: 1px solid #1e6f4f;
+      }
+
+      .navbar {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .nav-links a:hover {
+        color: #1e6f4f;
+      }
+
+      /* ================= CONTENT ================= */
+
+      main {
+        max-width: 700px;
+        margin: 120px auto;
+        padding: 0 20px;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+      }
+
+      .contact-section {
+        border-top: 1px solid #1e6f4f;
+        border-bottom: 1px solid #1e6f4f;
+        padding: 50px 0;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(2px);
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 40px;
+      }
+
+      .contact-item {
+        margin-bottom: 25px;
+        transition: 0.3s;
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .contact-item strong {
+        display: block;
+        color: #1e6f4f;
+        margin-bottom: 6px;
+      }
+
+      .contact-item a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: border-color 0.3s;
+        word-break: break-word;
+      }
+
+      .contact-item a:hover {
+        border-bottom: 1px solid #1e6f4f;
+      }
+
+      .contact-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(30, 111, 79, 0.6);
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        border-top: 1px solid #1e6f4f;
+        color: #777;
+        font-size: 12px;
+        position: relative;
+        z-index: 5;
+      }
+
+      /* ================= SOCCER BALL ================= */
+
+      .ball {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+
+        background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+<circle cx='50' cy='50' r='48' fill='white' stroke='black' stroke-width='3'/>\
+<polygon points='50,20 65,35 58,55 42,55 35,35' fill='black'/>\
+</svg>");
+
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        filter: brightness(0) saturate(100%) invert(32%) sepia(85%)
+          saturate(500%) hue-rotate(110deg)
+          drop-shadow(0 0 6px rgba(30, 111, 79, 0.7));
+
+        opacity: 0.85;
+        pointer-events: none;
+        z-index: 1;
+
+        animation: floatBall linear infinite, spinBall linear infinite;
+      }
+
+      @keyframes floatBall {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(50px, -80px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      @keyframes spinBall {
+        from {
+          rotate: 0deg;
+        }
+        to {
+          rotate: 360deg;
+        }
+      }
+
+      /* ================= RESPONSIVE ================= */
+
+      @media (max-width: 768px) {
+        main {
+          margin: 60px auto;
+          padding: 0 15px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        .contact-item {
+          font-size: 14px;
+        }
+
+        .contact-item:hover {
+          transform: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .nav-links {
+          gap: 15px;
+        }
+
+        .nav-links a {
+          font-size: 13px;
+        }
+
+        h1 {
+          font-size: 22px;
+        }
+
+        footer {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="nav-links">
+          <a href="index.html">მთავარი / Home</a>
+          <a href="contact.html">საკონტაქტო / Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-section">
+        <h1>Contact / საკონტაქტო ინფორმაცია</h1>
+
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:ninikikava1@gmail.com">ninikikava1@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Phone</strong>
+          <a href="tel:+995557217060">+995 557 217 060</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Location</strong>
+          Tbilisi, Georgia
+        </div>
+
+        <div class="contact-item">
+          <strong>LinkedIn</strong>
+          <a
+            href="https://www.linkedin.com/in/nini-kikava-736a83278"
+            target="_blank"
+            >linkedin.com/in/nini-kikava</a
+          >
+        </div>
+
+        <div class="contact-item">
+          <strong>Instagram</strong>
+          <a href="https://instagram.com/_kikava" target="_blank">@_kikava</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Facebook</strong>
+          <a href="https://www.facebook.com/share/1AeBAXm5nV/" target="_blank"
+            >Facebook Profile</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>© Nini Kikava — Portfolio Website. All Rights Reserved.</footer>
+
+    <!-- ================= BALL GENERATOR ================= -->
+
+    <script>
+      const isMobile = window.innerWidth < 768;
+      const totalBalls = isMobile ? 15 : 30;
+
+      for (let i = 0; i < totalBalls; i++) {
+        const ball = document.createElement("div");
+        ball.className = "ball";
+
+        const size = Math.random() * 8 + 12;
+        ball.style.width = size + "px";
+        ball.style.height = size + "px";
+
+        ball.style.top = Math.random() * window.innerHeight + "px";
+        ball.style.left = Math.random() * window.innerWidth + "px";
+
+        const floatSpeed = 20 + Math.random() * 20;
+        const spinSpeed = 15 + Math.random() * 20;
+
+        ball.style.animationDuration = floatSpeed + "s, " + spinSpeed + "s";
+
+        document.body.appendChild(ball);
+      }
+    </script>
+  </body>
+</html>
